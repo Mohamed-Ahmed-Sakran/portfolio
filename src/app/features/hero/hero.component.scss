@@ -387,13 +387,26 @@
       .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 3rem;
+        gap: 2.5rem;
+      }
+      .hero-content {
+        align-items: center;
+      }
+      .hero-title {
+        justify-content: center;
       }
       .hero-summary { max-width: 100%; margin: 0 auto; }
       .hero-ctas, .hero-socials { justify-content: center; }
-      .hero-visual { order: -1; }
+      .hero-visual { order: 0; }
       .avatar-wrapper { width: 200px; height: 200px; }
       .avatar-inner { width: 155px; height: 155px; }
       .avatar-initials { font-size: 2.2rem; }
-      .badge-angular, .badge-db { display: none; }
+      
+      /* Show all badges on mobile but adjust positions */
+      .badge-net { left: -15px; bottom: 20px; }
+      .badge-angular { right: -15px; bottom: 10px; }
+      .badge-db { right: -5px; top: -5px; }
+
+      /* Hide scroll indicator because mobile content is tall naturally */
+      .scroll-indicator { display: none; }
     }
