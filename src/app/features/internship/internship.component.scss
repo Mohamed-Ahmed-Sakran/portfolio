@@ -1,0 +1,279 @@
+.internship-section {
+      background: linear-gradient(180deg, transparent, rgba(6, 182, 212, 0.03), transparent);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    /* ─── Timeline Layout ─────────────────── */
+    .timeline {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding-left: 3rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 12px;
+        top: 20px;
+        bottom: 20px;
+        width: 2px;
+        background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+        border-radius: 2px;
+        opacity: 0.4;
+      }
+    }
+
+    .timeline-item {
+      position: relative;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -3rem;
+      top: 1.8rem;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--accent-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15), var(--shadow-accent);
+    }
+
+    .edu-dot {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+      box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15);
+    }
+
+    .dot-inner {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    /* ─── Card ────────────────────────────── */
+    .timeline-card {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .icard-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .org-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-md);
+      background: var(--accent-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1rem;
+      color: white;
+      font-family: var(--font-mono);
+      letter-spacing: -0.05em;
+      flex-shrink: 0;
+    }
+
+    .edu-logo {
+      background: linear-gradient(135deg, #06b6d4, #3b82f6);
+    }
+
+    .icard-info {
+      flex: 1;
+    }
+
+    .icard-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .icard-org {
+      font-size: 0.9rem;
+      color: var(--accent-light);
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .icard-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.7rem;
+      background: var(--bg-card);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+    }
+
+    .active-badge {
+      border-color: rgba(16, 185, 129, 0.3);
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .completed-badge {
+      border-color: rgba(99, 102, 241, 0.3);
+      color: var(--accent-light);
+      background: rgba(99, 102, 241, 0.08);
+    }
+
+    .pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+      animation: pulse 2s infinite;
+    }
+
+    .track-badge {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.2rem;
+      flex-shrink: 0;
+    }
+
+    .track-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .track-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--accent-2-light);
+      text-align: right;
+      font-family: var(--font-mono);
+    }
+
+    .card-divider {
+      height: 1px;
+      background: var(--glass-border);
+      margin: -0.5rem 0;
+    }
+
+    .icard-desc {
+      font-size: 0.93rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ─── Learning Grid ──────────────────── */
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .learning-item {
+      display: flex;
+      gap: 0.75rem;
+      padding: 1rem;
+      background: rgba(99, 102, 241, 0.05);
+      border: 1px solid rgba(99, 102, 241, 0.1);
+      border-radius: var(--radius-md);
+      transition: all 0.25s ease;
+
+      &:hover {
+        background: rgba(99, 102, 241, 0.1);
+        border-color: rgba(99, 102, 241, 0.25);
+        transform: translateY(-2px);
+      }
+    }
+
+    .learning-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .learning-body {
+      h4 {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 0.2rem;
+      }
+      p {
+        font-size: 0.8rem;
+        color: var(--text-secondary);
+        line-height: 1.5;
+      }
+    }
+
+    /* ─── Stack ──────────────────────────── */
+    .used-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .mono-accent {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--accent);
+    }
+
+    /* ─── Edu Highlights ─────────────────── */
+    .edu-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .edu-chip {
+      padding: 0.35rem 0.85rem;
+      background: rgba(6, 182, 212, 0.08);
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      color: var(--accent-2-light);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 2.5rem;
+      }
+      .icard-header {
+        flex-wrap: wrap;
+      }
+      .track-badge {
+        align-items: flex-start;
+      }
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+    }

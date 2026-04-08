@@ -1,0 +1,105 @@
+<section id="about" class="section about-section">
+  <div class="bg-grid about-grid"></div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header" appScrollAnimate animationType="up">
+      <div class="section-badge">⚡ About Me</div>
+      <h2 class="section-title">The Developer Behind The Code</h2>
+      <p class="section-subtitle">
+        A brief look into who I am, what drives me, and what I bring to the table.
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="about-grid-layout">
+      <!-- Left: Summary -->
+      <div class="about-text" appScrollAnimate animationType="left" [delay]="100">
+        <div class="glass-card about-card">
+          <div class="about-label">
+            <span class="mono-accent">About me</span>
+          </div>
+
+          @for (paragraph of paragraphs; track $index) {
+          <p class="about-paragraph">{{ paragraph }}</p>
+          }
+
+          <!-- Education -->
+          <div class="edu-block">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-info">
+              <h4>Bachelor of Computer & Information Science</h4>
+              <p>Zagazig University &nbsp;·&nbsp; 2020 – 2024</p>
+            </div>
+          </div>
+
+          <!-- Location + Email -->
+          <div class="contact-chips">
+            <span class="chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Cairo, Egypt
+            </span>
+            <span class="chip">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              muhmedsakran&#64;gmail.com
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Stats + Languages -->
+      <div class="about-right" appScrollAnimate animationType="right" [delay]="200">
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+          @for (stat of portfolio.stats; track stat.label) {
+          <div class="stat-card glass-card">
+            <div class="stat-icon">{{ stat.icon }}</div>
+            <div class="stat-value">
+              <span class="stat-num" [attr.data-target]="stat.value">
+                {{ animatedStats[stat.label] }}
+              </span>
+              <span class="stat-suffix">{{ stat.suffix }}</span>
+            </div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+          }
+        </div>
+
+        <!-- Language Cards -->
+        <div class="languages-block glass-card">
+          <h3 class="block-title">
+            <span class="mono-accent">// languages</span>
+          </h3>
+          @for (lang of portfolio.languages; track lang.name) {
+          <div class="lang-item">
+            <div class="lang-header">
+              <span class="lang-flag">{{ lang.flag }}</span>
+              <span class="lang-name">{{ lang.name }}</span>
+              <span class="lang-level">{{ lang.level }}</span>
+            </div>
+            <div class="lang-bar">
+              <div class="lang-fill" [style.width.%]="lang.percentage"></div>
+            </div>
+          </div>
+          }
+        </div>
+
+        <!-- Values -->
+        <div class="values-grid">
+          @for (val of values; track val.label) {
+          <div class="value-chip glass-card">
+            <span class="value-icon">{{ val.icon }}</span>
+            <span class="value-label">{{ val.label }}</span>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

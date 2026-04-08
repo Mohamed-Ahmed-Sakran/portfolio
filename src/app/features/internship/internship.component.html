@@ -1,0 +1,149 @@
+<section id="internship" class="section internship-section">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="section-header" appScrollAnimate>
+      <div class="section-badge">🏢 Experience</div>
+      <h2 class="section-title">Internship - Training</h2>
+      <p class="section-subtitle">
+        Intensive real-world training bridging academic knowledge with production-grade development.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+
+      <!-- ITI Card -->
+      <div class="timeline-item" appScrollAnimate animationType="left" [delay]="100">
+        <div class="timeline-dot">
+          <div class="dot-inner"></div>
+        </div>
+        <div class="timeline-card glass-card">
+          <!-- Card Header -->
+          <div class="icard-header">
+            <div class="org-logo">
+              <span>ITI</span>
+            </div>
+            <div class="icard-info">
+              <h3 class="icard-title">Intensive Training Program (ITP)</h3>
+              <p class="icard-org">Information Technology Institute</p>
+              <div class="icard-meta">
+                <span class="meta-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                  Oct 2025 – Present
+                </span>
+                <span class="meta-tag active-badge">
+                  <span class="pulse-dot"></span>
+                  Currently Active
+                </span>
+                <span class="meta-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  Cairo, Egypt
+                </span>
+              </div>
+            </div>
+            <div class="track-badge">
+              <span class="track-label">Track</span>
+              <span class="track-name">Full-Stack .NET &amp; Angular</span>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="card-divider"></div>
+
+          <!-- Description -->
+          <p class="icard-desc">
+            An intensive, government-backed developer program by Egypt's premier tech institute —
+            ITI. The program focuses on real-world, production-ready development using .NET Core
+            and Angular, guided by senior industry engineers.
+          </p>
+
+          <!-- What I'm Learning -->
+          <div class="learning-grid">
+            @for (item of learningItems; track item.title) {
+            <div class="learning-item">
+              <div class="learning-icon">{{ item.icon }}</div>
+              <div class="learning-body">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.desc }}</p>
+              </div>
+            </div>
+            }
+          </div>
+
+          <!-- Tech Stack Used -->
+          <div class="used-stack">
+            <span class="stack-label">
+              <span class="mono-accent">// tech_stack</span>
+            </span>
+            <div class="stack-tags">
+              @for (tech of techStack; track tech) {
+              <span class="tag">{{ tech }}</span>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- University Card -->
+      <div class="timeline-item" appScrollAnimate animationType="left" [delay]="200">
+        <div class="timeline-dot edu-dot">
+          <div class="dot-inner"></div>
+        </div>
+        <div class="timeline-card glass-card">
+          <div class="icard-header">
+            <div class="org-logo edu-logo">
+              <span>ZU</span>
+            </div>
+            <div class="icard-info">
+              <h3 class="icard-title">Bachelor of Computer &amp; Information Science</h3>
+              <p class="icard-org">Zagazig University</p>
+              <div class="icard-meta">
+                <span class="meta-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                    <line x1="16" y1="2" x2="16" y2="6" />
+                    <line x1="8" y1="2" x2="8" y2="6" />
+                    <line x1="3" y1="10" x2="21" y2="10" />
+                  </svg>
+                  2020 – 2024
+                </span>
+                <span class="meta-tag completed-badge">
+                  ✓ Graduated
+                </span>
+                <span class="meta-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  Zagazig, Egypt
+                </span>
+              </div>
+            </div>
+          </div>
+          <p class="icard-desc">
+            Four years of rigorous study in Computer Science fundamentals — algorithms, data structures,
+            operating systems, databases, software engineering, and OOP — building the strong theoretical
+            foundation that underpins every project I build.
+          </p>
+          <div class="edu-highlights">
+            @for (h of eduHighlights; track h) {
+            <div class="edu-chip">
+              <span>{{ h }}</span>
+            </div>
+            }
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

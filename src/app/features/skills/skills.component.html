@@ -1,0 +1,58 @@
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="section-header" appScrollAnimate>
+      <div class="section-badge">🧠 Skills</div>
+      <h2 class="section-title">My Core Skills - Technologies</h2>
+      <p class="section-subtitle">
+        Technologies and tools I use to build robust, scalable applications.
+      </p>
+    </div>
+
+    <!-- Skill Groups Grid -->
+    <div class="skills-grid">
+      @for (group of portfolio.skillGroups; track group.category; let i = $index) {
+      <div class="skill-group glass-card" appScrollAnimate animationType="up" [delay]="i * 80">
+        <!-- Group Header -->
+        <div class="group-header" [style.--group-color]="group.color">
+          <div class="group-icon-wrap">{{ group.icon }}</div>
+          <h3 class="group-title">{{ group.category }}</h3>
+          <div class="group-count">{{ group.skills.length }}</div>
+        </div>
+
+        <!-- Skills List -->
+        <div class="skills-list">
+          @for (skill of group.skills; track skill.name; let j = $index) {
+          <div class="skill-item" [style.--delay]="j * 50 + 'ms'">
+            <div class="skill-top">
+              <span class="skill-name">{{ skill.name }}</span>
+              @if (skill.level) {
+              <span class="skill-percent">{{ skill.level }}%</span>
+              }
+            </div>
+            @if (skill.level) {
+            <div class="skill-bar">
+              <div class="skill-fill" [style.width.%]="skill.level"
+                [style.background]="'linear-gradient(90deg, ' + group.color + '99, ' + group.color + ')'"></div>
+            </div>
+            }
+          </div>
+          }
+        </div>
+      </div>
+      }
+    </div>
+
+    <!-- Tech Tags Cloud -->
+    <div class="tech-cloud" appScrollAnimate animationType="up" [delay]="200">
+      <p class="cloud-label">
+        <span class="mono-text">also familiar with</span>
+      </p>
+      <div class="tags-wrap">
+        @for (tech of extraTech; track tech) {
+        <span class="tag">{{ tech }}</span>
+        }
+      </div>
+    </div>
+  </div>
+</section>
